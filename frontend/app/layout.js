@@ -6,15 +6,20 @@ const RootLayout = ({ children }) => {
       <head>
         <title>SiPinter</title>
       </head>
-      <body className="bg-gray-100">
-        <header className="bg-gray-800 text-white p-4">
-          <nav>
-            <ul className="flex justify-center space-x-4">
-              <li><a href="/" className="hover:underline">Home</a></li>
-              <li><a href="/services" className="hover:underline">Services</a></li>
-              <li><a href="/services/create" className="hover:underline">Create Service</a></li>
-            </ul>
-          </nav>
+      <body>
+        <header className="bg-gray-800 text-white p-4 flex flex-row flex-nowrap">
+          <div className="flex-grow-0">
+            <img src="/images/logo_sipinter.png" alt="SiPinter" className="h-10" />
+          </div>
+          <div className="flex-grow">
+            <nav className="flex justify-end space-x-4 items-center h-full">
+              <ul className="flex space-x-4">
+                <li><a href="/" className="hover:underline">Home</a></li>
+                <li><a href="/services" className="hover:underline">Services</a></li>
+                <li><a href="/services/create" className="hover:underline">Create Service</a></li>
+              </ul>
+            </nav>
+          </div>
         </header>
         <main className="p-8">
           {children}

@@ -9,6 +9,17 @@ const CreateService = () => {
   const [rating, setRating] = useState('');
   const [error, setError] = useState('');
 
+  const backgroundStyle = {
+    // backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/background.jpg')",
+    // backgroundSize: 'cover',
+    // backgroundPosition: 'center',
+    // backgroundRepeat: 'no-repeat',
+    height: '100vh',
+    color: 'black',
+ 
+
+  };
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -43,8 +54,8 @@ const CreateService = () => {
   };
 
   return (
-    <div>
-      <h1>Create Service</h1>
+    <div style={backgroundStyle}>
+      <h1 style={{color: 'white'}}>Create Service</h1>
       {error && <p style={{ color: 'red' }}>{error}</p>}
       <form onSubmit={handleSubmit}>
         <input
@@ -75,7 +86,7 @@ const CreateService = () => {
           onChange={(e) => setRating(e.target.value)}
           required
         />
-        <button type="submit">Create</button>
+        <button style={{color: 'white'}} type="submit">Create</button>
       </form>
     </div>
   );

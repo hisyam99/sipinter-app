@@ -1,19 +1,20 @@
 import React from 'react';
 import Link from 'next/link';
+import { List, ListItem, Typography } from '@mui/material';
 
 const ServiceList = ({ services }) => {
   return (
-    <ul className="list-none p-0">
+    <List sx={{ p: 0 }}>
       {services.map((service) => (
-        <li key={service.id} className="my-2">
-          <Link
-            href={`/services/${service.id}`}
-            className="text-blue-600 hover:underline">
-            {service.name}
+        <ListItem key={service.id} sx={{ my: 2 }}>
+          <Link href={`/services/${service.id}`} passHref>
+            <Typography variant="body1" component="a" sx={{ textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}>
+              {service.name}
+            </Typography>
           </Link>
-        </li>
+        </ListItem>
       ))}
-    </ul>
+    </List>
   );
 };
 
