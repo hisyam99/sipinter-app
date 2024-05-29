@@ -1,4 +1,6 @@
-## SiPinter Service: Solusi Perbaikan Tepat dan Terpercaya
+## ~~SiPinter Service: Solusi Perbaikan Tepat dan Terpercaya~~
+
+# repo pindah ke: [sipinter-web](https://github.com/hisyam99/sipinter-web)
 
 Aplikasi yang menawarkan solusi perbaikan tepat dan terpercaya.
 
